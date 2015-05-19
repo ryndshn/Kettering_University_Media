@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => 'ryan4888@gmail.com', 'name' => 'Kettering University Media'],
+	'from' => ['address' => 'ketteringuniversitymedia@gmail.com', 'name' => 'Kettering University Media'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
 	|
 	*/
 
-	'username' => 'ryan4888@gmail.com',
+	'username' => 'ketteringuniversitymedia@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
 	|
 	*/
 
-	'password' => 'ryan82038842!',
+	'password' => 'kettering82038842!',
 
 	/*
 	|--------------------------------------------------------------------------
