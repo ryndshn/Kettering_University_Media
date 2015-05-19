@@ -19,7 +19,7 @@
     </head>
 
     <body>
-        <div class="text-center container">sdf
+        <div class="text-center container">
 
             <img class="img-responsive" src="http://i.imgur.com/LWkM7tM.png" alt="Responsive image">
 
