@@ -16,6 +16,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Home :: Kettering Media</title>
 
+        <script>
+            function verifyEmail()
+            {
+                var emailField = $("#textEmailAddress").val();
+
+                //will validate student email addresses
+                //var email = new RegExp(/^\w{4}\d{4}\@kettering.edu$/);
+
+                //will validate all email addresses ending in @kettering.edu
+                var email = new RegExp(/@kettering.edu$/);
+
+                if (emailField == "") {
+
+                    alert("Please enter an email address");
+
+                }
+                else {
+
+                    if (email.test(emailField)) {
+
+                        //valid email address
+                        alert("This is a valid KU email address");
+
+                    }
+                    else {
+
+                        //invalid email address
+                        alert("Please enter a valid KU email address");
+
+                    }
+
+                }
+            }
+        </script>
+
     </head>
 
     <body>
@@ -93,7 +128,7 @@
                                     <div class="form-group">
                                         <label class="col-md-4 control-label">E-Mail Address</label>
                                         <div class="col-md-6">
-                                            <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                            <input type="email" id="textEmailAddress" class="form-control" name="email" value="{{ old('email') }}">
                                         </div>
                                     </div>
 
@@ -113,7 +148,7 @@
 
                                     <div class="form-group">
                                         <div class="col-md-6 col-md-offset-4">
-                                            <button type="submit" class="btn btn-primary">
+                                            <button type="submit" class="btn btn-primary" onClick = "verifyEmail()">
                                                 Register
                                             </button>
                                         </div>
@@ -129,4 +164,3 @@
     </body>
 
 </html>
-
