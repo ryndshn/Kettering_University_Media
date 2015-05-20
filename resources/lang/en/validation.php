@@ -41,6 +41,7 @@ return [
 	"in"                   => "The selected :attribute is invalid.",
 	"integer"              => "The :attribute must be an integer.",
 	"ip"                   => "The :attribute must be a valid IP address.",
+    "email_kettering"      => "Please use Kettering email address",
 	"max"                  => [
 		"numeric" => "The :attribute may not be greater than :max.",
 		"file"    => "The :attribute may not be greater than :max kilobytes.",
