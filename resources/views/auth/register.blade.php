@@ -19,7 +19,7 @@
         <script>
             function verifyEmail()
             {
-                var emailField = $("#textEmailAddress").val();
+                var emailField = $("#txtEmailAddress").val();
 
                 //will validate student email addresses
                 //var email = new RegExp(/^\w{4}\d{4}\@kettering.edu$/);
