@@ -14,7 +14,7 @@
         <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home :: Kettering Media</title>
+        <title>Videos :: Kettering Media</title>
 
     </head>
 
@@ -39,8 +39,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="{{ url('/') }}">Home</a></li>
-                            <li><a href="{{ url('/video') }}">Videos</a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                            <li class="active"><a href="{{ url('/video') }}">Videos</a></li>
                             <li><a href="{{ url('/image') }}">Images</a></li>
                         </ul>
                         <form class="navbar-form navbar-right" role="search">

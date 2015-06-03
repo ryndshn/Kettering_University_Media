@@ -15,6 +15,10 @@ Route::get('/', 'HomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('/image', 'ImageController@index');
+
+Route::get('/video', 'VideoController@index');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

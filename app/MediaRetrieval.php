@@ -37,4 +37,46 @@ class MediaRetrieval {
 
     }
 
+    public static function getImagePageMedia() {
+
+        $media = array();
+
+        $results = DB::select('SELECT * FROM media WHERE type=\'image\'');
+
+        $resultsArray = json_decode(json_encode($results), true);
+
+        for($i = 0; $i < count($resultsArray); $i++) {
+
+            $resultsRow = $resultsArray[$i];
+
+            $media_object = new Media($resultsRow['id'], $resultsRow['user_id'], $resultsRow['title'], $resultsRow['embed'], $resultsRow['type']);
+
+            array_push($media, $media_object);
+        }
+
+        return $media;
+
+    }
+
+    public static function getVideoPageMedia() {
+
+        $media = array();
+
+        $results = DB::select('SELECT * FROM media WHERE type=\'video\'');
+
+        $resultsArray = json_decode(json_encode($results), true);
+
+        for($i = 0; $i < count($resultsArray); $i++) {
+
+            $resultsRow = $resultsArray[$i];
+
+            $media_object = new Media($resultsRow['id'], $resultsRow['user_id'], $resultsRow['title'], $resultsRow['embed'], $resultsRow['type']);
+
+            array_push($media, $media_object);
+        }
+
+        return $media;
+
+    }
+
 }
