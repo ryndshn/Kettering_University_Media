@@ -10,7 +10,7 @@ namespace App;
 
 
 use Illuminate\Support\Facades\DB;
-use App\Media;
+use App\MediaObject;
 
 use Auth;
 
@@ -28,7 +28,7 @@ class MediaRetrieval {
 
             $resultsRow = $resultsArray[$i];
 
-            $media_object = new Media($resultsRow['id'], $resultsRow['user_id'], $resultsRow['title'], $resultsRow['embed'], $resultsRow['type']);
+            $media_object = new MediaObject($resultsRow['id'], $resultsRow['user_id'], $resultsRow['title'], $resultsRow['embed'], $resultsRow['type']);
 
             array_push($media, $media_object);
         }
@@ -49,7 +49,7 @@ class MediaRetrieval {
 
             $resultsRow = $resultsArray[$i];
 
-            $media_object = new Media($resultsRow['id'], $resultsRow['user_id'], $resultsRow['title'], $resultsRow['embed'], $resultsRow['type']);
+            $media_object = new MediaObject($resultsRow['id'], $resultsRow['user_id'], $resultsRow['title'], $resultsRow['embed'], $resultsRow['type']);
 
             array_push($media, $media_object);
         }
@@ -70,7 +70,7 @@ class MediaRetrieval {
 
             $resultsRow = $resultsArray[$i];
 
-            $media_object = new Media($resultsRow['id'], $resultsRow['user_id'], $resultsRow['title'], $resultsRow['embed'], $resultsRow['type']);
+            $media_object = new MediaObject($resultsRow['id'], $resultsRow['user_id'], $resultsRow['title'], $resultsRow['embed'], $resultsRow['type']);
 
             array_push($media, $media_object);
         }
