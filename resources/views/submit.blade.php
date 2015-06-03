@@ -121,7 +121,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label>YouTube or Imgur Embed (click "How To" link for help if you need to)</label>
+                    <label>YouTube or Imgur Embed</label>
                     <input type="text" class="form-control" name="url" id="url">
                 </div>
 
