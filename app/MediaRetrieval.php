@@ -79,4 +79,20 @@ class MediaRetrieval {
 
     }
 
+    public static function getMedia($id) {
+
+        $media = array();
+
+        $results = DB::select('SELECT * FROM media WHERE id='.$id);
+
+        $resultsArray = json_decode(json_encode($results), true);
+
+        $result = $resultsArray[0];
+
+        $media_object = new MediaObject($result['id'], $result['user_id'], $result['title'], $result['embed'], $result['type']);
+
+        return $media_object;
+
+    }
+
 }

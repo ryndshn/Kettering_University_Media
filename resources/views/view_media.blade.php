@@ -14,7 +14,7 @@
         <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home :: Kettering Media</title>
+        <title>Videos :: Kettering Media</title>
 
     </head>
 
@@ -39,7 +39,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="{{ url('/') }}">Home</a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
                             <li><a href="{{ url('/video') }}">Videos</a></li>
                             <li><a href="{{ url('/image') }}">Images</a></li>
                         </ul>
@@ -63,20 +63,16 @@
                 </div><!-- /.container-fluid -->
             </nav>
 
-            @for($i = 0; $i < count($media); $i++)
-
                 <div class="well">
 
                     <div class="embed-responsive embed-responsive-16by9">
-                        {!! $media[$i]->embed !!}
+                        {!! $media->embed !!}
                     </div>
 
-                    <a href="/view_media/{{ $media[$i]->id }}"><h3>{{ $media[$i]->title }}</h3></a>
-                    <h4>Submitted by: {{ $media[$i]->username }}</h4>
+                    <h3>{{ $media->title }}</h3>
+                    <h4>Submitted by: {{ $media->username }}</h4>
 
                 </div>
-
-            @endfor
 
 
 

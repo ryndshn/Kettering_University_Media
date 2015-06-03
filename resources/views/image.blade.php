@@ -50,7 +50,7 @@
                             <button type="submit" class="btn btn-default">Search</button>
                         </form>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="submit_demo.html">Submit</a></li>
+                            <li><a href="{{ url('/submit') }}">Submit</a></li>
                             @if(Auth::guest())
                                 <li><a href="{{ url('/auth/login') }}" >Login</a></li>
                                 <li><a href="{{ url('/auth/register') }}" >Sign Up</a></li>
@@ -71,7 +71,7 @@
                         {!! $media[$i]->embed !!}
                     </div>
 
-                    <h3>{{ $media[$i]->title }}</h3>
+                    <a href="/view_media/{{ $media[$i]->id }}"><h3>{{ $media[$i]->title }}</h3></a>
                     <h4>Submitted by: {{ $media[$i]->username }}</h4>
 
                 </div>

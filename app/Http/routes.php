@@ -19,6 +19,11 @@ Route::get('/image', 'ImageController@index');
 
 Route::get('/video', 'VideoController@index');
 
+Route::get('/view_media/{id}', 'ViewMediaController@index');
+
+Route::get('/submit', 'SubmitController@index');
+Route::post('/submit', 'SubmitController@submit');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
