@@ -40,21 +40,15 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="{{ url('/') }}">Home</a></li>
-                            <li><a href="#">Videos</a></li>
-                            <li><a href="#">Images</a></li>
+                            <li><a href="{{ url('/video') }}">Videos</a></li>
+                            <li><a href="{{ url('/image') }}">Images</a></li>
                         </ul>
-                        <form class="navbar-form navbar-right" role="search">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search">
-                            </div>
-                            <button type="submit" class="btn btn-default">Search</button>
-                        </form>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="submit_demo.html">Submit</a></li>
                             @if(Auth::guest())
                                 <li><a href="{{ url('/auth/login') }}" >Login</a></li>
                                 <li><a href="{{ url('/auth/register') }}" >Sign Up</a></li>
                             @else
+                                <li><a href="{{ url('/submit') }}">Submit</a></li>
                                 <li><a href="#" >{{ Auth::user()->name }}</a></li>
                                 <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
                             @endif
