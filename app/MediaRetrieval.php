@@ -9,6 +9,32 @@
 namespace App;
 
 
+use Illuminate\Support\Facades\DB;
+use App\Media;
+
+use Auth;
+
 class MediaRetrieval {
+
+    public static function getHomePageMedia() {
+
+        $media = array();
+
+        $results = DB::select('SELECT * FROM media');
+
+        $resultsArray = json_decode(json_encode($results), true);
+
+        for($i = 0; $i < count($resultsArray); $i++) {
+
+            $resultsRow = $resultsArray[$i];
+
+            $media_object = new Media($resultsRow['id'], $resultsRow['user_id'], $resultsRow['title'], $resultsRow['embed'], $resultsRow['type']);
+
+            array_push($media, $media_object);
+        }
+
+        return $media;
+
+    }
 
 }

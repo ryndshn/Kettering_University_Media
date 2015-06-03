@@ -63,26 +63,21 @@
                 </div><!-- /.container-fluid -->
             </nav>
 
-            <div class="row">
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="video_demo.html"> <img src="http://img.youtube.com/vi/hWRC_6cdszo/maxresdefault.jpg" alt="..."> </a>
-                        <div class="caption">
-                            <a href="video_demo.html" ><h3>Kettering University's FIRST Robotics Community Center In Action</h3></a>
-                            <p>VIDEO</p>
-                        </div>
+            @for($i = 0; $i < count($media); $i++)
+                <div class="well">
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        {!! $media[$i]->embed !!}
                     </div>
+
+                    <h3>{{ $media[$i]->title }}</h3>
+                    <h4>Submitted by: {{ $media[$i]->username }}</h4>
+
                 </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="image_demo.html"> <img src="http://i.imgur.com/OXxH6eb.jpg" alt="..."></a>
-                        <div class="caption">
-                            <a href="image_demo.html" ><h3>Kettering Vehicles</h3></a>
-                            <p>PHOTO ALBUM</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            @endfor
+
+
 
         </div>
     </body>
