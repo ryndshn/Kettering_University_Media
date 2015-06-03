@@ -33,7 +33,7 @@ class MediaRetrieval {
             array_push($media, $media_object);
         }
 
-        return $media;
+        return array_reverse($media);
 
     }
 
@@ -54,7 +54,7 @@ class MediaRetrieval {
             array_push($media, $media_object);
         }
 
-        return $media;
+        return array_reverse($media);
 
     }
 
@@ -75,7 +75,7 @@ class MediaRetrieval {
             array_push($media, $media_object);
         }
 
-        return $media;
+        return array_reverse($media);
 
     }
 
